@@ -15,8 +15,22 @@
     <servlet-name>AdminLoginServlet</servlet-name>
     <servlet-class>com.revFlix.servlets.AdminLoginServlet</servlet-class>
   </servlet>
+  
+  
+
   <servlet-mapping>
     <servlet-name>AdminLoginServlet</servlet-name>
     <url-pattern>/AdminLogin</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>AdminUpdateServlet</display-name>
+    <servlet-name>AdminUpdateServlet</servlet-name>
+    <servlet-class>com.revFlix.servlets.AdminUpdateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminUpdateServlet</servlet-name>
+    <url-pattern>/AdminUpdate</url-pattern>
   </servlet-mapping>
 </web-app>

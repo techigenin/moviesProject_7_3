@@ -21,10 +21,9 @@ pass_word varchar not null
 );
 
 
- insert into admins values ('admin1', 'movie1'), ('admin2', 'movie2');
+insert into admins values ('admin1', 'movie1'), ('admin2', 'movie2');
 
 select * from admins;
-
 
 create table movie_genre(
 genre varchar primary key,
@@ -43,3 +42,5 @@ create table movie_actors(
 movieid integer not null,
 actorid integer not null
 );
+
+
