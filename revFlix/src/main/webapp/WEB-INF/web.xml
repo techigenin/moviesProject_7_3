@@ -15,11 +15,35 @@
     <servlet-name>AdminLoginServlet</servlet-name>
     <servlet-class>com.revFlix.servlets.AdminLoginServlet</servlet-class>
   </servlet>
+<<<<<<< HEAD
   <servlet-mapping>
     <servlet-name>AdminLoginServlet</servlet-name>
     <url-pattern>/AdminLogin</url-pattern>
   </servlet-mapping>
   <servlet>
+=======
+  
+    <servlet-mapping>
+    <servlet-name>AdminLoginServlet</servlet-name>
+    <url-pattern>/AdminLogin</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>com.revFlix.servlets.LogoutServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+  
+
+  
+    <servlet>
+    <description></description>
+    <display-name>AdminUpdateServlet</display-name>
+>>>>>>> 16615737dd04841da22b30e2a6ddde2efccf6e45
     <servlet-name>AdminUpdateServlet</servlet-name>
     <servlet-class>com.revFlix.servlets.AdminUpdateServlet</servlet-class>
   </servlet>
