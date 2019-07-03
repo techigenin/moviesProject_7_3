@@ -1,7 +1,7 @@
 package com.revFlix.daos;
 
 
-import java.awt.List;
+import java.util.List;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -134,7 +134,7 @@ public class UserDaoImpl implements UserDao {
 	            ResultSet rs =stmt.executeQuery(sql);
 	            
 	            while(rs.next()) {
-	                int id = rs.getInt(columnIndex)
+//	                int id = rs.getInt(columnIndex)
 	            }
 	        } catch (SQLException e) {
 	            e.printStackTrace();
