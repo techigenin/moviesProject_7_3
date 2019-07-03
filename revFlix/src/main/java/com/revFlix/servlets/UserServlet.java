@@ -20,25 +20,28 @@ public class UserServlet extends HttpServlet {
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Movie> rblist;
-        Movie mv=new Movie();
-        String name = request.getPathInfo();
-        HttpSession sess = request.getSession(false);
-        if (sess == null && sess.getAttribute("user") == null)
-            {
-            
-            request.getRequestDispatcher("home").forward(request,response);
-                return;
-                
-            }
-    
-        else {
-            
-//             rblist= mv.form();
-            ObjectMapper objectMapper = new ObjectMapper();
-//            String st=objectMapper.writeValueAsString(rblist);
+        response.sendRedirect("user.html");
+        return;
+		
+//		List<Movie> rblist;
+//        Movie mv=new Movie();
+//        String name = request.getPathInfo();
+//        HttpSession sess = request.getSession(false);
+//        if (sess == null && sess.getAttribute("user") == null)
+//            {
+//            
+//            request.getRequestDispatcher("home").forward(request,response);
+//                return;
+//                
+//            }
+//    
+//        else {
+//            
+////             rblist= mv.form();
+//            ObjectMapper objectMapper = new ObjectMapper();
+////            String st=objectMapper.writeValueAsString(rblist);
 //            response.getWriter().write(st);
-        }
+        
           
     }
 
