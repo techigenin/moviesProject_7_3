@@ -17,19 +17,6 @@ import com.revFlix.utils.ConnectionFactory;
 public class UserDaoImpl implements UserDao {
 
 	Connection conn = ConnectionFactory.getConnection();
-	
-	@Override
-	public void insertMovie(Movie m) {
-		try {PreparedStatement pstmt = conn.prepareStatement("select insert_movie(?, ?, ?, ?, ?)");
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-	}
-
-	@Override
-	public void updateMovie(Movie m) {
-
-	}
 
 	@Override
 	public boolean loginUser(Admin a) {
@@ -50,17 +37,15 @@ public class UserDaoImpl implements UserDao {
 		return false;
 	}
 	
-	public class FillUpdate {
-		Connection conn =ConnectionFactory.getConnection();
-		
-		public void FillForm(Movie re) {
+	public void insertMovie(Movie re) {
 			String title=re.getTitle();
 			LocalDate year=re.getYear();
 			String ge=re.getGenre();
 			LocalTime rt=re.getRunTime();
 			
+			
 			String sql="INSERT INTO Movie" + 
-					"(title,runtime,genere,year)" + 
+					"(title,runtime,genre,year)" + 
 					"VALUES(?,?,?,?);";
 		
 			
@@ -83,7 +68,7 @@ public class UserDaoImpl implements UserDao {
 			genrefill(ge,title,year);
 		}
 
-		public void genrefill(String genre,String title,LocalDate year) {
+		private void genrefill(String genre,String title,LocalDate year) {
 			Movie mv = new Movie();
 			String sql="select movieid from Movie where genre=" + genre +"year =" +year +"title =" + title;
 			int id = 0;
@@ -109,7 +94,7 @@ public class UserDaoImpl implements UserDao {
 		}
 		
 		
-		public void CreateGenre(int i , String genre) {
+		private void CreateGenre(int i , String genre) {
 			
 			
 			
@@ -132,8 +117,6 @@ public class UserDaoImpl implements UserDao {
 		
 				e.printStackTrace();
 			}	
-			
-
 		}
+	}
 
-}

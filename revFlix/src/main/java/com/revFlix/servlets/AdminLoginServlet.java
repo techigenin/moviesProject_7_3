@@ -33,7 +33,7 @@ public class AdminLoginServlet extends HttpServlet {
 		
 		if (goodLogin) {
 			resp.setStatus(200);
-			resp.sendRedirect("AdminUpdate");
+			resp.sendRedirect("AdminInsert");
 		} else {
 			resp.setStatus(418);
 			resp.sendRedirect("home.html");

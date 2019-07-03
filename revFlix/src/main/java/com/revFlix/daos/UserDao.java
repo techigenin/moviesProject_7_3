@@ -5,10 +5,10 @@ import com.revFlix.pojos.*;
 public interface UserDao {
 	
 	// insert movie
-	void insertMovie(Movie m);
+	//void insertMovie(Movie m);
 	
 	// update movie
-	void updateMovie(Movie m);
+	public void insertMovie(Movie re);
 	
 	// login 
 	boolean loginUser(Admin a);

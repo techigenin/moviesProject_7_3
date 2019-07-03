@@ -14,25 +14,25 @@
               </ul>
 
 
-<form action="AdminUpdate" target="_blank" method="POST">
+<form action="AdminInsert" target="_blank" method="POST">
     <div class="content">
-<p><label>Movie ID: <input type="text" name="id" maxlength="100" style="width: 50 px;"></label></p>
-<p ><label >Title   : <input  type="text" name="title" maxlength="100" style="width:400px;"></label></p>
+<p ><label>Title   : <input  type="text" name="title" maxlength="100" style="width:400px;"></label></p>
+<p><label>Release Date   : <input type="date" name="year" maxlength="100" style="width:400px;"></label></p>
 <p><label>Genre   : <input type="text" name="genre" maxlength="100" style="width:400px;"></label></p>
 <p><label>Actors  : <input type="text" name="actors" maxlength="100" style="width:400px;"></label></p>
 <p><label>RunTime : <input type="text" name="runtime" maxlength="100" style="width:400px;"></label></p>
 
-<label for="meeting-time">Choose Date:
+<!-- <label for="meeting-time">Choose Date:
 
 <input type="datetime-local" id="meeting-time"
        name="date" value="2018-06-12T19:30"
-       min="2018-06-07T00:00" max="2018-06-14T00:00"></label>
+       min="2018-06-07T00:00" max="2018-06-14T00:00"></label> -->
 <label><input type="submit" value="Submit"></label>
 </div>
 </form>
 
 
-<link rel="stylesheet" href="css/updateStyle.css">
-<script src="js/updateform.js"></script>
+<link rel="stylesheet" href="css/insertMovie.css">
+<script src="js/insertMovie.js"></script>
 </body>
 </html>
