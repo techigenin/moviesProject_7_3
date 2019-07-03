@@ -4,17 +4,18 @@ import java.time.*;
 import java.util.ArrayList;
 
 public class Movie {
+	private int id;
 	private String title;
 	private LocalDate year;
 	private LocalTime runTime;
-	private ArrayList<String> genres;
+	private String genre;
 	private ArrayList<String> actors;
-	public Movie(String title, LocalDate year, LocalTime runTime, ArrayList<String> genres, ArrayList<String> actors) {
+	public Movie(String title, LocalDate year, LocalTime runTime, String genre, ArrayList<String> actors) {
 		super();
 		this.title = title;
 		this.year = year;
 		this.runTime = runTime;
-		this.genres = genres;
+		this.genre = genre;
 		this.actors = actors;
 	}
 	public Movie() {
@@ -26,7 +27,7 @@ public class Movie {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((actors == null) ? 0 : actors.hashCode());
-		result = prime * result + ((genres == null) ? 0 : genres.hashCode());
+		result = prime * result + ((genre == null) ? 0 : genre.hashCode());
 		result = prime * result + ((runTime == null) ? 0 : runTime.hashCode());
 		result = prime * result + ((title == null) ? 0 : title.hashCode());
 		result = prime * result + ((year == null) ? 0 : year.hashCode());
@@ -46,10 +47,10 @@ public class Movie {
 				return false;
 		} else if (!actors.equals(other.actors))
 			return false;
-		if (genres == null) {
-			if (other.genres != null)
+		if (genre == null) {
+			if (other.genre != null)
 				return false;
-		} else if (!genres.equals(other.genres))
+		} else if (!genre.equals(other.genre))
 			return false;
 		if (runTime == null) {
 			if (other.runTime != null)
@@ -86,17 +87,23 @@ public class Movie {
 	public void setRunTime(LocalTime runTime) {
 		this.runTime = runTime;
 	}
-	public ArrayList<String> getGenres() {
-		return genres;
-	}
-	public void setGenres(ArrayList<String> genres) {
-		this.genres = genres;
-	}
 	public ArrayList<String> getActors() {
 		return actors;
 	}
 	public void setActors(ArrayList<String> actors) {
 		this.actors = actors;
+	}
+	public String getGenre() {
+		return genre;
+	}
+	public void setGenre(String genre) {
+		this.genre = genre;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 
 
