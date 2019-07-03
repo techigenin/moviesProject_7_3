@@ -19,7 +19,11 @@ public class AdminLoginServlet extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		ConnectionFactory
+		ConnectionFactory.getConnection(this);
+		
+		String username = req.getParameter("username");
+		String password = req.getParameter("password");
+		Admin newAdmin = new Admin (username, password);
 	}
 
 }
