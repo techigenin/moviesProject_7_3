@@ -43,15 +43,3 @@ create table movie_actors(
 movieid integer not null,
 actorid integer not null
 );
-
-
-
-
-
-
-
-
-
-
-
-create table actor
