@@ -1,15 +1,15 @@
 package com.revFlix.pojos;
 
-public class User {
+public class Admin {
 	
 	private String username;
 	private String password;
-	public User(String username, String password) {
+	public Admin(String username, String password) {
 		super();
 		this.username = username;
 		this.password = password;
 	}
-	public User() {
+	public Admin() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -29,7 +29,7 @@ public class User {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		User other = (User) obj;
+		Admin other = (Admin) obj;
 		if (password == null) {
 			if (other.password != null)
 				return false;
