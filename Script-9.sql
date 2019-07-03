@@ -32,7 +32,6 @@ movieid integer references movie (movieid)
 
 select * from movie_genre;
 
-
 create table actor(
 actorid serial primary key,
 actorname varchar not null
@@ -42,5 +41,7 @@ create table movie_actors(
 movieid integer not null,
 actorid integer not null
 );
+
+select * from movie;
 
 

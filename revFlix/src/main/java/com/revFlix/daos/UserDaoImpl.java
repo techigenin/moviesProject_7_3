@@ -1,6 +1,7 @@
 package com.revFlix.daos;
 
 
+import java.awt.List;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -8,6 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.*;
+import java.util.ArrayList;
 
 import com.revFlix.daos.UserDao;
 import com.revFlix.pojos.Admin;
@@ -118,5 +120,32 @@ public class UserDaoImpl implements UserDao {
 				e.printStackTrace();
 			}	
 		}
+		
+		public ArrayList<Movie> getList(){
+	        
+	        ArrayList<Movie> list = new ArrayList<Movie>();
+	        String sql="select title,runtime,genre from Movie";
+	        
+	        
+	        Statement stmt ;
+	        
+	        try {
+	            stmt=conn.createStatement();
+	            ResultSet rs =stmt.executeQuery(sql);
+	            
+	            while(rs.next()) {
+	                int id = rs.getInt(columnIndex)
+	            }
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	        }
+	            
+	            
+	        
+
+	        
+	        
+	        return list;
+	    }
 	}
 

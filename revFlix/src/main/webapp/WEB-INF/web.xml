@@ -19,19 +19,14 @@
     <servlet-name>AdminLoginServlet</servlet-name>
     <url-pattern>/AdminLogin</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <servlet-name>LogoutServlet</servlet-name>
     <servlet-class>com.revFlix.servlets.LogoutServlet</servlet-class>
   </servlet>
-  
   <servlet-mapping>
     <servlet-name>LogoutServlet</servlet-name>
     <url-pattern>/logout</url-pattern>
   </servlet-mapping>
-  
-
-  
   <servlet>
     <description></description>
     <display-name>AdminUpdateServlet</display-name>
@@ -42,12 +37,22 @@
     <servlet-name>AdminUpdateServlet</servlet-name>
     <url-pattern>/AdminUpdate</url-pattern>
   </servlet-mapping>
-    <servlet>
+  <servlet>
     <servlet-name>AdminInsertServlet</servlet-name>
     <servlet-class>com.revFlix.servlets.AdminInsertServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>AdminInsertServlet</servlet-name>
     <url-pattern>/AdminInsert</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UserServlet</display-name>
+    <servlet-name>UserServlet</servlet-name>
+    <servlet-class>com.revFlix.servlets.UserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserServlet</servlet-name>
+    <url-pattern>/user</url-pattern>
   </servlet-mapping>
 </web-app>
